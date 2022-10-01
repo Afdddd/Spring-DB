@@ -19,6 +19,5 @@ public class DBConnectionUtil {
         } catch (SQLException e) {
             throw new IllegalStateException(e);
         }
-
     }
 }
