@@ -1,9 +1,7 @@
 package hello.jdbc.Connection;
 
 import com.zaxxer.hikari.HikariDataSource;
-import hello.jdbc.connection.ConnectionConst;
 import lombok.extern.slf4j.Slf4j;
-import org.h2.engine.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
@@ -49,6 +47,6 @@ public class ConnectionTest {
         dataSource.setMaximumPoolSize(10);
 
         useDataSource(dataSource);
-        Thread.sleep(1000);gi
+        Thread.sleep(1000);
     }
 }
