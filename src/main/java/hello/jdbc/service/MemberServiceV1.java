@@ -24,7 +24,7 @@ public class MemberServiceV1 {
     }
 
     private void validation(Member toMember) {
-        if (toMember.getMemberId().equals("ex")) {
+        if (toMember.getMemberId().equals("memberEX")) {
             throw new IllegalStateException();
         }
     }
