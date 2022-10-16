@@ -1,5 +1,6 @@
 package hello.jdbc.exception.basic;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
 import java.net.ConnectException;
@@ -12,7 +13,18 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
  *  런타임 예외는 해당 객체가 처리할 수 없는 예외는 무시하면 된다. 따라서 체크 예외 처럼 예외를 강제로 의존하지 않아도 된다.
  */
 
+@Slf4j
 public class UncheckedApp {
+
+    @Test
+    void printEx() {
+        Controller controller = new Controller();
+        try {
+            controller.request();
+        } catch (RuntimeSQLException e) {
+            log.info("ex",e);
+        }
+    }
 
     @Test
     void unchecked() {
