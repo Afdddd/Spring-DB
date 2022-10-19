@@ -18,6 +18,7 @@ public class MemberServiceV4 {
 
     public MemberServiceV4(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
+
     }
 
     @Transactional
